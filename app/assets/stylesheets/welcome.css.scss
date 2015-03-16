@@ -1,0 +1,109 @@
+.colorchangerbox {
+  background: grey;
+  width: 280px;
+  padding: 30px;
+  position: relative;
+  margin: 20px 0px;  
+  
+  .clone {
+    color: white;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    cursor: pointer;
+  }
+  .delete {
+    color: white;
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    cursor: pointer;    
+  }
+  
+  a {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-decoration: none;
+    color: white;
+  }
+  
+}
+
+@media all and (orientation: portrait) and (max-device-width: 320px) { 
+
+  div.container {
+    div.colorchangerbox {
+      a.colorchanger {
+        text-shadow: inherit;    
+        font-size: 2em;
+        margin-left: 10px;
+      }
+      width: 700px;    
+      div.clone,
+      div.delete {
+        font-size: 60px;
+      }
+      .buttons {
+        position: relative;
+        top: 50px;
+        left: 30px;
+      }
+      height: 150px;
+      margin-left: 0px;
+    }
+  }
+
+
+}
+
+@media all and (orientation: landscape) and (max-device-width: 480px) {
+  
+  div.container {
+    div.colorchangerbox {
+      width: 300px;
+      div.clone,
+      div.delete {
+        font-size: 60px;
+      }
+      .buttons {
+        position: relative;
+        top: 30px;
+        left: 10px;
+      }
+      margin-left: 20px;    
+      height: 100px;
+    }
+  }
+
+}
+
+a.colorchanger.reset {
+  display: block;
+  visibility: hidden;
+  margin-top:20px;
+  text-transform:uppercase;
+  text-align:center;
+  
+  &.visible {
+    visibility: visible;
+  }
+  &.invisible {
+    visibility: hidden;
+  }
+}
+
+
+@media only screen and (min-width: 750px)  {
+
+  .container {
+    .colorchangerbox {
+      display: inline-block;
+      margin-left: 40px;
+    }
+    .colorchangerbox:nth-child(odd) {
+      margin-left: 0px;
+    }
+        
+    width: 750px;
+    
+  }
+}
